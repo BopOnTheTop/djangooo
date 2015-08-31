@@ -1,5 +1,5 @@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@  This is a test mankey-coding project    @
+@  This is a test monkey-coding project    @
 @  Author: BopOnTheTop. No rights protected@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
