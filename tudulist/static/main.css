@@ -1,1 +1,47 @@
-Lol
+    @font-face
+    {
+    font-family: BetinaScript;
+    src: url(lazy.ttf);
+    }
+
+    @font-face
+    {
+    font-family: BetinaScript;
+    src: url(lazy.ttf);
+    }
+
+    body
+    {
+    /* background-size: 1377px;*/
+    background-image: url(bg.png); /* Путь к фоновому изображению */
+    background-attachment: scroll; /* Фиксируем фон веб-страницы */
+    }
+
+    table {
+           border-collapse: collapse;
+            border: 2px solid black;
+            font-family: BetinaScript;
+          }
+
+    tr,td {
+            border: 2px solid black;
+            font-family: BetinaScript;
+            font-size: 24px ;
+          }
+/*Applying a nice color to the selector*/
+    select,option
+            {
+            font-size: 30px;
+            background-color:  RGB(243, 228, 185);
+            font-color: #000
+            }
+/*Top right compass picture placing*/
+    #kompas {
+            position: relative;
+            }
+
+    #kompas img {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                }
