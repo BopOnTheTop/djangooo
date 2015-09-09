@@ -1,0 +1,26 @@
+
+{% load static from staticfiles %}
+<html>
+<!DOCTYPE html>
+<meta lang="en">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="http://localhost:8000/static/main.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Листочок-нагадайка. Котрий Тудуйка{% block meta_title %}{% endblock meta_title %} </title>
+    {% block extra_css %}{% endblock extra_css %}
+</head>
+<body>
+
+
+
+{% block content %}{% endblock content %}
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+{% block extra_js %}{% endblock extra_js %}
+</body>
+</html>

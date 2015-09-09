@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block content %}
+<!--link rel="stylesheet" type="text/css" href="../static/main.css"-->
+<a href="todo/">
+<div  id="ship" class="ship" >
+    <!--
+    <img src="static/kompass2.png" id="compass_image" class="img-rounded" alt="Terra Inkognitas" width="350" height="350">
+    -->
+    </div></a>
+<div class="container">
+<div class="labelize">
+    Що ще боярин намірився робити?
+</div>
+<form action="/todo/add" method="post" enctype="multipart/form-data">
+<div>
+    <label for="quest">Квест</label>
+    <input type="text" value=""
+    name="quest" id="quest" />
+</div>
+
+<div>
+    <label for="whois">Квестодавець</label>
+    <input type="text" value=""
+    name="whois" id="whois"
+    placeholder="Ймення квестодавця" />
+</div>
+
+<div>
+    <label for="given">Видано</label>
+    <input type="text" value=""
+    name="given" id="given" 
+    placeholder="Напр. 01-01-1970"/>
+</div>
+
+<div>
+    <label for="deadline">Дедлайн</label>
+    <input type="text" value=""
+    name="deadline" id="deadline"
+    placeholder="Напр. 1970-01-01" />
+</div>
+
+<div>
+    <label for="done">Зроблено?</label>
+    <select name="done" id="done">
+        <option value="True">Так</option>
+        <option value="False">Ні</option>
+    </select>
+</div>
+
+<div>
+    <label for="progress">Прогрессс</label>
+    <input type="text" value=""
+    name="progress" id="progress" />
+</div>
+
+<div>
+    <label for="priority">Пріоритет</label>
+    <select name="priority" id="priority">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+</div>
+
+<div>
+    <label for="notes">Додаткові Нотатки</label>
+    <div class="container">
+    <textarea name="notes" id="notes" cols="80" rows="2"></textarea>
+       <!-- class="form-control -->
+    </div>
+</div>
+
+<div class="container" >
+    <div class="row">
+        <div class="col-xs-8"></div>
+        <div class="col=xs-4">
+            <input type="submit" value="Додати" name="add_button" style="border-bottom: none;"/>
+            <button type="submit" name="cancel_button" style="background-color:transparent;">Скасувати</button>
+        </div>
+    </div>
+</div>
+
+</form>
+</div>
+{% endblock content %}

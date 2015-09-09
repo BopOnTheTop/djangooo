@@ -18,6 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^todo/add/$', 'tudulist.views.todo_add',name='tudu_add'),
+    url(r'^todo/add', 'tudulist.views.todo_add',name='tudu_add'),
     url(r'^todo$', 'tudulist.views.todo',name='tudu'),
+    url(r'^todo/change/$', 'tudulist.views.todo_change',name='tudu_change'),
 ]
