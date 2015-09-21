@@ -2,7 +2,7 @@
 {% load static from staticfiles %}
 
 {% block content %}
-<a href="todo/add">
+<a href="http://localhost:8000/todo/add">
 <div  id="kompas" class="compass" >
     <!--
     <img src="static/kompass2.png" id="compass_image" class="img-rounded" alt="Terra Inkognitas" width="350" height="350">
@@ -52,15 +52,23 @@
             <td>{{ item.deadline }}</td>
             <td>{{ item.priority }} з 5</td>
             <td>
+                <form id="{{ item.id }}" name="selector_{{ item.id }}" method="post" enctype="multipart/form-data">{% csrf_token %}
                 <!-- Selector it's good for you RGBA(243, 228, 185, 0.2)-->
-                <select class="form-control" style="background-color:  RGBA(243, 228, 185, 0.2); -webkit-appearance: none;">
-                     <option value="#">В топку!</option>
-                     <option value="#">В правку!</option>
-                     <option value="#">На Експорт!</option>
-                     <option value="#">Шо за фрукт?</option>
+                <select name="action" class="form-control" style="background-color:  RGBA(243, 228, 185, 0.2); -webkit-appearance:
+                none;">
+                     <option onclick="submitform(); window.location.reload()" value="delete {{ item.id }}">В топку!</option>
+                     <option onclick="submitform();" value="change {{ item.id }}">В правку!</option>
+                     <option onclick="submitform();" value="export {{ item.id }}">На Експорт!</option>
+                     <option onclick="submitform();" value="info {{ item.id }}">Шо за фрукт?</option>
                 </select>
+                    <script type="text/javascript">
+                            function submitform()
+                            {
+                            document.selector_{{ item.id }}.submit();
+                            }
+                    </script>
                 <!-- -->
-
+                </form>
                 <!--
                 <div class="dropdown">
                 <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

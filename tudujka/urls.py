@@ -18,7 +18,10 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^todo/info/[0-9]{1,5}$','tudulist.views.todo_info',name="todo_info"),
     url(r'^todo/add', 'tudulist.views.todo_add',name='tudu_add'),
-    url(r'^todo$', 'tudulist.views.todo',name='tudu'),
-    url(r'^todo/change/$', 'tudulist.views.todo_change',name='tudu_change'),
+    url(r'^todo/change/', 'tudulist.views.todo_change',name='tudu_change'),
+    url(r'^todo/delete/[0-9]{1,5}$','tudulist.views.todo_delete',name="tudu_delete"),
+    url(r'^todo', 'tudulist.views.todo',name='tudu'),
+
 ]

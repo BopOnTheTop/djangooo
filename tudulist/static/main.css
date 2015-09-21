@@ -4,12 +4,6 @@
     src: url(lazy.ttf);
     }
 
-    @font-face
-    {
-    font-family: BetinaScript;
-    src: url(lazy.ttf);
-    }
-
     body
     {
     /* background-size: 1377px;*/
@@ -60,6 +54,7 @@
             font-family: BetinaScript;
             font-size: 60px ;
             padding-top: 40px;
+            }
     .very_button {
                  font-family: BetinaScript;
                  background-color:  RGBA(243, 228, 185, 0.2);
@@ -67,8 +62,13 @@
                  background-color:transparent
 
                  }
+    .info {
+            font-family: BetinaScript;
+            font-size: 30px ;
+            background-color:  RGBA(243, 228, 185, 0.2);
+          }
             /*background-color:  RGBA(243, 228, 185, 0.2);*/
-              }
+
 /*Top right compass picture placing*/
     /*#kompas {
             position: relative;

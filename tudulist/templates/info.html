@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-11 labelize">
+            Фрукт: {{ quest.quest }}
+        </div>
+
+    </div>
+    <div class="row" style="margin: 20px;">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-5 info">
+        Квестодавець: {{quest.whois}} <br>
+        Видано: {{quest.given}} <br>
+        Фiналъ: {{quest.deadline}} <br>
+        Здано:  {% if quest.done == true %}
+                Йессс <br>
+            {% else %}
+                Нeа <br>
+            {% endif %}
+        Прогресс: {{quest.progress}} <br>
+        Пріоритет: {{quest.priority}} з 5<br>
+        <div> <strong style="font-size: 34px; margin-left: 50px;"> Поясняшки </strong></div>
+        </div>
+        <textarea rows="10" cols="69" style="font-size: 30px;">
+            {{ quest.notes }}
+        </textarea>
+        <div class="col-xs-4 info">
+
+        </div>
+
+    </div>
+</div>
+{% endblock content %}
