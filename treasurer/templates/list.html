@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style type="text/css">
+  ul {list-style: none;padding: 0px;margin: 0px;}
+  ul li {display: block;position: relative;float: left;border:1px solid rgba(161, 109, 22, 0.9)); border-radius: 4px;}
+  li ul {display: none;}
+  ul li a {display: block;background: rgba(200,200,200,0.1);padding: 5px 10px 5px 10px;text-decoration: none;
+           white-space: nowrap;color: rgba(0, 0, 0, 0.9);}
+  ul li a:hover {background: rgba(0,0,0,0.2);}
+  li:hover ul {display: block; position: absolute;}
+  li:hover li {float: none;}
+  li:hover a {background: rgba(161, 109, 22, 0.2);}
+  li:hover li a:hover {background: rgba(161, 109, 22, 0.0);}
+  #drop-nav li ul li {border-top: 0px;}
+</style>
+<a href="/treasurer/add">
+<div  id="kompas" class="candle" >
+    <!--
+    <img src="static/kompass2.png" id="compass_image" class="img-rounded" alt="Terra Inkognitas" width="350" height="350">
+    -->
+    </div></a>
+<div class="container">
+    <div class="row" style="">
+        <br>
+        <br>
+        <br>
+        <h1 style="font-family: BetinaScript; padding-left: 100px; font-size: 60px ;">Таки Гешефт</h1>
+    </div>
+</div>
+<div class="container" id="contents">
+    <div class="row">
+    <div class="col-xs-10">
+    <table class="table">
+        <tr style="font-size: 25px;">
+            <td><b>Нумер</b></td>
+            <td><b>Кредит</b></td>
+            <td><b>Дебит</b></td>
+            <td><b>Зачем</b></td>
+            <td><b>Процент</b></td>
+            <td><b>Таки время</b></td>
+            <td><b>Таки от кого</b></td>
+            <td><b>Таки кому</b></td>
+            <td><b>Таки акции</b></td>
+        </tr>
+        {% for cost in object_list %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ cost.credit }}</td>
+            <td>{{ cost.debit }}</td>
+            <td>{{ cost.what_for }}</td>
+            <td>{{ cost.percent }}</td>
+            <td>{{ cost.date }}</td>
+            <td>{{ cost.from_who }}</td>
+            <td>{{ cost.who_to }}</td>
+            <td>
+                <ul id="drop-nav">
+                  <li>Цимес?
+                    <ul>
+                      <li><a href="/treasurer/change/{{ cost.id }}">Таки править</a></li>
+                      <li><a href="/treasurer/info/{{ cost.id }}">По-подробней</a></li>
+                      <li><a href="/treasurer/delete/{{ cost.id }}">Изничтожить!</a></li>
+                    </ul>
+                  </li>
+                </ul>
+            </td>
+        </tr>
+        {% endfor %}
+        </table>
+        <br>
+        <br>
+        <div class="labelize">
+        {% if rez >= 0 %}
+        Таки мы в плосе на {{ rez }} шекелей!<br>
+        {% else %}
+        Ой вей. мы в минусе на {{ rez }} шекелей!!!<br>
+        {% endif %}
+        <br>
+        <br>
+        <br>
+        </div>
+{% endblock %}

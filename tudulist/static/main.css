@@ -38,6 +38,7 @@
 
 
          }
+
     input, textarea {
          font-family: BetinaScript;
          font-size: 24px ;
@@ -114,3 +115,118 @@
                 position: absolute;
                 background-position: 0px 0px ;
                 }
+    .galeone  {
+                position: absolute;
+                top: 90px;
+                right: 68px;
+                width: 550px;
+                height:400px;
+                display:block;
+                background:transparent url('galleon-lg_bg.png') ;
+                background-size: cover;
+                background-position: 0x 0px ;
+
+           }
+    .galeone:hover {
+                    position: absolute;
+                    background-position: -450px 0px ;
+                    }
+    .cross {
+                position: absolute;
+                top: 0px;
+                right: 350px;
+                width: 630px;
+                height:630px;
+                display:block;
+                background:transparent url('Cross.png') ;
+                background-size: cover;
+                background-position: 0x 0px ;
+           }
+        .jew  {
+                position: absolute;
+                top: 140px;
+                left: 100px;
+                width: 650px;
+                height:400px;
+                display:block;
+                background:transparent url('jew-grab-money-kinky-hair-hooknose-grin.png') ;
+                background-size: cover;
+                background-position: -500px 0px ;
+
+           }
+    .jew:hover {
+                    position: absolute;
+                    background-position: 0px 0px ;
+                    }
+    .inkpen  {
+                position: absolute;
+                top: 460px;
+                left: 620px;
+                width: 300px;
+                height:150px;
+                display:block;
+                background:transparent url('Blank-scroll-quill-pen-decorated-inkwell.png') ;
+                background-size: cover;
+                background-position: 0px 0px ;
+
+           }
+    .inkpen:hover {
+                    position: absolute;
+                    background-position: 0px 450px ;
+                    }
+    .sextant  {
+                position: absolute;
+                top: 0px;
+                left: 550px;
+                width: 210px;
+                height:210px;
+                display:block;
+                background:transparent url('Sextant.png') ;
+                background-size: cover;
+                background-position: 0px -25px ;
+
+           }
+    .sextant:hover {
+                    position: absolute;
+                    background-position: 0px -300px ;
+                    }
+    .doublon  {
+                position: absolute;
+                top: 246px;
+                left: 632px;
+                width: 132px;
+                height:132px;
+                display:block;
+                background:transparent url('Doublon.png') ;
+                background-size: cover;
+                background-position: 0px -1px ;
+
+           }
+    .anchor  {
+                position: absolute;
+                top: 150px;
+                left: 1001px;
+                width: 212px;
+                height:150px;
+                display:block;
+                background:transparent url('anchor.png') ;
+                background-size: cover;
+                background-position: 0px -1px ;
+
+           }
+    .candle  {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                width: 220px;
+                height:220px;
+                display:block;
+                background:transparent url('candle.png') ;
+                background-size: cover;
+                background-position: 0px -247px ;
+
+           }
+    .candle:hover {
+                    position: absolute;
+                    background-position: 0px -20px ;
+                    }

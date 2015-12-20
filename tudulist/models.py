@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 from django.db import models
+from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 
 # Create your models here.
+
 class task(models.Model):
     """Task Model"""
     id = models.IntegerField(primary_key=True, unique=True, db_index=True)
@@ -13,3 +16,4 @@ class task(models.Model):
     progress = models.CharField(blank=True, max_length=256, verbose_name=u"Зроблено", null=True)
     whois = models.CharField(max_length=256, blank=True, verbose_name=u"Квестодавець")
     priority = models.IntegerField(verbose_name="Пріоритет", null=True)
+

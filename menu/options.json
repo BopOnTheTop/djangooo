@@ -1,0 +1,9 @@
+[
+  {
+    "model": "menu.options",
+    "pk": 1,
+    "fields": {
+      "signals": true
+    }
+  }
+  ]

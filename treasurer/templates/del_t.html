@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block content %}
+<div class="contaner">
+    <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-6" style="font-size: 30px">
+<form action="" method="post">{% csrf_token %}
+    <p>Таки точно удалить "{{ object }}"?</p>
+    <input type="submit" value="Confirm" />
+</form>
+    </div>
+        </div>
+</div>
+{% endblock content %}

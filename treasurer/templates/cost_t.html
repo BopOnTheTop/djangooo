@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block content %}
+<!--link rel="stylesheet" type="text/css" href="../static/main.css"-->
+<a href="../todo">
+<div  id="ship" class="ship" >
+    <!--
+    <img src="static/kompass2.png" id="compass_image" class="img-rounded" alt="Terra Inkognitas" width="350" height="350">
+    -->
+    </div></a>
+<div class="container">
+<div class="labelize">
+    Гешефт таки махер?
+</div>
+<form  name="adder" action="/treasurer/add" method="post" enctype="multipart/form-data">{% csrf_token %}
+
+   {{ form.as_p }}
+
+<div class="container" >
+    <div class="row">
+        <div class="col-xs-8"></div>
+        <div class="col=xs-4">
+            <input type="submit" value="Додати" name="add_button" style="border-bottom: none;"/>
+            <button type="submit" name="cancel_button" style="background-color:transparent;">Скасувати</button>
+        </div>
+    </div>
+</div>
+
+</form>
+</div>
+{% endblock content %}
