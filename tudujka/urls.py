@@ -17,7 +17,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from tudulist.views import *
 from treasurer.views import *
-from menu.views import *
+from menux.views import *
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
