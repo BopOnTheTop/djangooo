@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-7">
+        <div  class="indian" ></div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4"></div>
+        <div class="col-xs-4">
+    <form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>{{ form.username.label_tag }}</td>
+                <td>{{ form.username }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.password.label_tag }}</td>
+                <td>{{ form.password }}</td>
+            </tr>
+       </table>
+
+       <input type="submit" value="login" />
+       <input type="hidden" name="next" value="{{ next }}" />
+   </form>
+            {% if form.errors %}
+        <p>Чьото тут не сходиться...</p>
+            {% endif %}
+        </div>
+
+    </div>
+
+</div>
+{% endblock content %}

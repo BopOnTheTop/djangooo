@@ -9,12 +9,13 @@
     /* background-size: 1377px;*/
     background-image: url(bg.png); /* Путь к фоновому изображению */
     background-attachment: scroll; /* Фиксируем фон веб-страницы */
+    background-size: 100%;
     }
 
     table {
            border-collapse: collapse;
-            border: 2px solid black;
-            font-family: BetinaScript;
+           border: 2px solid black;
+           font-family: BetinaScript;
           }
 
     tr,td {
@@ -118,7 +119,7 @@
     .galeone  {
                 position: absolute;
                 top: 90px;
-                right: 68px;
+                left: 745px;
                 width: 550px;
                 height:400px;
                 display:block;
@@ -134,7 +135,7 @@
     .cross {
                 position: absolute;
                 top: 0px;
-                right: 350px;
+                left: 384px;
                 width: 630px;
                 height:630px;
                 display:block;
@@ -230,3 +231,8 @@
                     position: absolute;
                     background-position: 0px -20px ;
                     }
+    .indian{
+    height: 80%;
+    background:transparent url('indian.jpg') no-repeat;
+    background-position: center;
+    }

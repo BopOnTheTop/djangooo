@@ -21,6 +21,7 @@ from menu.views import *
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^login', 'django.contrib.auth.views.login',name='login', kwargs={'template_name': 'login.html'}),
     url(r'^todo/info/[0-9]{1,5}$','tudulist.views.todo_info',name="todo_info"),
     url(r'^todo/add', 'tudulist.views.todo_add',name='tudu_add'),
     url(r'^todo/change/[0-9]{1,5}$', 'tudulist.views.todo_change',name='tudu_change'),
