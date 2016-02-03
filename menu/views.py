@@ -14,7 +14,9 @@ from django.views.generic import TemplateView
 from django.views.generic import DetailView
 from django.core.urlresolvers import reverse_lazy
 from .models import options
+from django.contrib.auth.decorators import login_required, permission_required
 
+@login_required
 def gimme_menu(request):
     return render(request, "menu.html", {'date' : datetime.now().date()})
 

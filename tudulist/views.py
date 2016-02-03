@@ -19,8 +19,10 @@ from datetime import datetime
 from django.views.generic import TemplateView
 from django.views.generic import DetailView
 from django.core.urlresolvers import reverse_lazy
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def todo(request):
     """
     Generating the todo list and POST responses of the forms
@@ -47,7 +49,7 @@ def todo(request):
     print(request.path)
     return render(request, 'todo.html', {'todo': todo_list})
 
-
+@login_required
 def todo_info(request):
     path = request.path
     path = path.split(sep='/')
@@ -59,6 +61,7 @@ def todo_info(request):
     print(item[0].quest)
     return render(request, 'info.html', {'quest' : item[0]} )
 
+@login_required
 def todo_add(request):
     if request.method == "POST":
 # was form add button clicked?
@@ -86,6 +89,7 @@ def todo_add(request):
             return HttpResponseRedirect('./')
     return render(request, 'add.html', {})
 
+@login_required
 def todo_change(request):
     path = request.path
     path = path.split(sep='/')
@@ -101,6 +105,8 @@ def todo_change(request):
     return render(request, 'add.html', {'item' : item[0],'deadline' : item[0].deadline.strftime("%d.%m.%Y"),
                                        'given' : item[0].given.strftime("%d.%m.%Y") })
 
+
+@login_required
 def todo_delete(request):
     task.objects()
     return HttpResponseRedirect('todo')

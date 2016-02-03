@@ -233,6 +233,7 @@
                     }
     .indian{
     height: 80%;
-    background:transparent url('indian.jpg') no-repeat;
+    background:transparent url('indian.png') no-repeat;
+    background-size: 60%;
     background-position: center;
     }
