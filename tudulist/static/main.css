@@ -10,6 +10,10 @@
     background-image: url(bg.png); /* Путь к фоновому изображению */
     background-attachment: scroll; /* Фиксируем фон веб-страницы */
     background-size: 100%;
+    font-family: BetinaScript;
+    font-size: 24px ;
+    background-color:  RGBA(243, 228, 185, 0.2);
+    border: 0px none black
     }
 
     table {
