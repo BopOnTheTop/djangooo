@@ -24,7 +24,8 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/login/$', auth_views.login,name='login', kwargs={'template_name': 'login.html'}),
-    url(r'^logout/$', auth_views.logout,name='logout'),
+    url(r'^logout/$', LogoutView.as_view(),name='logout'),
+    #url(r'^logout/$', auth_views.logout,name='logout'),
     url(r'^todo/info/[0-9]{1,5}$','tudulist.views.todo_info',name="todo_info"),
     url(r'^todo/add', 'tudulist.views.todo_add',name='tudu_add'),
     url(r'^todo/change/[0-9]{1,5}$', 'tudulist.views.todo_change',name='tudu_change'),

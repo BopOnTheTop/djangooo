@@ -12,6 +12,8 @@ from django.core.urlresolvers import reverse
 from datetime import datetime
 from django.views.generic import TemplateView
 from django.views.generic import DetailView
+from django.views.generic import View
+from django.contrib.auth import logout
 from django.core.urlresolvers import reverse_lazy
 from .models import options
 from django.contrib.auth.decorators import login_required, permission_required
@@ -29,3 +31,8 @@ class Options(UpdateView):
     template_name = "update.html"
     fields = [ 'signals',]
     success_url = "/"
+
+class LogoutView(View):
+    def get(self, request):
+        logout(request)
+        return HttpResponseRedirect('/')
