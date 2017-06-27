@@ -32,6 +32,12 @@ class Options(UpdateView):
     fields = [ 'signals',]
     success_url = "/"
 
+
+class LogoutAskView(DetailView):
+    
+    template_name = "logout.html"
+    
+
 class LogoutView(View):
     def get(self, request):
         logout(request)

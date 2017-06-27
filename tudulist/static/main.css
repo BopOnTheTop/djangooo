@@ -241,3 +241,20 @@
     background-size: 60%;
     background-position: center;
     }
+    
+    .traveller{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 515px;
+    height:400px;
+    display: block;
+    background:transparent url('path_traveller.png') no-repeat;
+    background-position: center; 
+    background-position: 0px 0px;
+    background-size: cover;
+    }
+    .traveller:hover{
+    position: absolute;
+    background-position: -517px 0px ;
+    }
